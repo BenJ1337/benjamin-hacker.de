@@ -33,6 +33,4 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-      - run: ls -a
-      - run: pwd
-          #local-dir: /home/runner/work/benjamin-hacker.de/benjamin-hacker.de/dist/
+          local-dir: ./dist/
