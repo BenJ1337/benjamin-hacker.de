@@ -1,0 +1,26 @@
+---
+impressumLinkText: Impressum
+datenschutzLinkText: Datenschutz
+---
+
+{% extends "./base.njk" %}
+
+{% block content %}
+<p>Current page: {{ page.url | url }} </p>
+{% endblock %}
+
+{% block footer %}
+    <footer>
+        <div class="navbar navbar-dark bg-dark navbar-expand">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/impressum/">{{ impressumLinkText }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/datenschutz/">{{ datenschutzLinkText }}</a>
+                </li>
+            </ul>
+        <div>
+    </footer>
+    {{ super() }}
+{% endblock %}
